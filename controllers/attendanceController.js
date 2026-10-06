@@ -58,7 +58,7 @@ export const markAttendance = async (req, res) => {
 export const getAttendanceLogs = async (req, res) => {
   try {
     const records = await Attendance.find()
-      .populate('student', 'name photoUrl semester faculty degree') // faculty සහ degree මෙහි populate කර ඇත
+      .populate('student', 'name photoUrl semester faculty degree') // populate faculty and degree
       .populate('markedBy', 'name email')
       .sort({ createdAt: -1 });
 

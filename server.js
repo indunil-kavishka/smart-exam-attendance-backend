@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import path from 'path'; // path import කරගැනීම
+import path from 'path'; // path import
 import dns from 'node:dns';
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
 import connectDB from './config/db.js';
